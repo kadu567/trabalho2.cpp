@@ -1,4 +1,3 @@
-
 Documentação do Projeto: Somador Completo com Arduino
 1. Introdução
 Este projeto tem como objetivo implementar um somador completo utilizando uma placa Arduino. O somador completo é um componente digital que calcula a soma de dois bits de entrada, levando em consideração um bit de carry de entrada. Este projeto foi desenvolvido para a disciplina de Análise e Orientação Técnica do curso Técnico em Desenvolvimento de Sistemas do SENAC NH, sob orientação do professor Glauber Kiss de Souza.
@@ -10,12 +9,11 @@ Este projeto tem como objetivo implementar um somador completo utilizando uma pl
 5 LEDs (para saídas digitais)
 1 Protoboard
 Fios de Conexão
+
 3. Descrição do Projeto
 O projeto consiste em ler dois nibbles (4 bits cada) de entrada através de botões conectados aos pinos digitais do Arduino. Esses nibbles representam os dois números a serem somados. O somador completo calcula a soma desses dois números bit a bit, considerando o carry bit gerado em cada operação. O resultado da soma e o carry final são exibidos em LEDs conectados aos pinos de saída do Arduino.
 
 4. Diagrama de Conexões
-yaml
-Copiar código
 Pinos de Entrada:
 - Pino 0: Bit 1 do primeiro número (nib1a)
 - Pino 1: Bit 2 do primeiro número (nib1b)
@@ -33,9 +31,8 @@ Pinos de Saída:
 - Pino 10: Bit 3 do resultado (res1c)
 - Pino 11: Bit 4 do resultado (res1d)
 - Pino 12: Carry final (carryBit)
+
 5. Código Fonte
-cpp
-Copiar código
 // TÉCNICO EM DESENVOLVIMENTO DE SISTEMAS - SENAC NH
 // Programa base para TRABALHO 2
 // PROF.: Glauber Kiss de Souza
@@ -140,10 +137,12 @@ void loop()
     digitalWrite(11, res1d);
     digitalWrite(12, carryBit); // Write the final carry bit to pin 12
 }
+
 6. Funcionamento
 Configuração Inicial: No setup(), os pinos de entrada (0 a 7 e 13) são configurados como INPUT e os pinos de saída (8 a 12) como OUTPUT.
 Leitura de Dados: No loop(), os valores dos nibbles de entrada e o sinal de soma são lidos dos pinos configurados.
 Cálculo da Soma: Se o sinal de soma estiver ativo (igual a 1), a função somaBit é chamada para cada bit dos nibbles, e a função somaCarryBit calcula o carry bit.
 Escrita dos Resultados: Os resultados da soma e o carry final são escritos nos pinos de saída.
+
 7. Conclusão
 Este projeto demonstra a implementação de um somador completo em um sistema Arduino, utilizando componentes básicos como botões e LEDs. A lógica de soma bit a bit com carry é fundamental em circuitos digitais e serve como base para o entendimento de operações aritméticas mais complexas em eletrônica digital.
