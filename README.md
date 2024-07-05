@@ -1,6 +1,6 @@
 Documentação do Projeto: Somador Completo com Arduino
 1. Introdução
-Este projeto tem como objetivo implementar um somador completo utilizando uma placa Arduino. O somador completo é um componente digital que calcula a soma de dois bits de entrada, levando em consideração um bit de carry de entrada. Este projeto foi desenvolvido para a disciplina de Análise e Orientação Técnica do curso Técnico em Desenvolvimento de Sistemas do SENAC NH, sob orientação do professor Glauber Kiss de Souza.
+Este projeto tem como objetivo implementar um somador completo utilizando uma placa Arduino. O somador completo é um componente digital que calcula a soma de dois bits de entrada, levando em consideração um bit de carry de entrada.
 
 2. Componentes Necessários
 1 Placa Arduino (Uno, Mega, etc.)
@@ -37,6 +37,22 @@ Pinos de Saída:
 // Programa base para TRABALHO 2
 // PROF.: Glauber Kiss de Souza
 // DISC.: Analisar Orient. Técnicas
+// Licença MIT
+// Copyright (c) 2024 [Seu Nome]
+// É concedida permissão, gratuitamente, a qualquer pessoa que obtenha uma cópia
+// deste software e dos arquivos de documentação associados (o "Software"), para lidar
+// no Software sem restrição, incluindo, sem limitação, os direitos de usar, copiar, modificar, mesclar, publicar, distribuir, sublicenciar e/ou vender
+// cópias do Software, e permitir às pessoas a quem o Software é
+// fornecido para o efeito, nas seguintes condições:
+// O aviso de copyright acima e este aviso de permissão devem ser incluídos em todos
+// cópias ou partes substanciais do Software.
+// O SOFTWARE É FORNECIDO "COMO ESTÁ", SEM GARANTIA DE QUALQUER TIPO, EXPRESSA OU
+// IMPLÍCITA, INCLUINDO MAS NÃO SE LIMITANDO ÀS GARANTIAS DE COMERCIALIZAÇÃO,
+// ADEQUAÇÃO A UM DETERMINADO FIM E NÃO VIOLAÇÃO. EM NENHUM CASO OS AUTORES OU
+// OS DETENTORES DO DIREITO AUTORAL SERÃO RESPONSÁVEIS POR QUALQUER RECLAMAÇÃO, DANOS OU OUTRAS
+// RESPONSABILIDADE, SEJA EM UMA AÇÃO DE CONTRATO, TORT OU DE OUTRA FORMA, DECORRENTE DE,
+// FORA OU EM CONEXÃO COM O SOFTWARE OU O USO OU OUTRAS NEGOCIAÇÕES NO
+// SOFTWARE.
 
 int soma = 13; // Variable to store the sum signal from pin 13
 int carryBit = 0; // Variable to store the carry bit for addition
