@@ -38,7 +38,7 @@ Pinos de Saída:
 // PROF.: Glauber Kiss de Souza
 // DISC.: Analisar Orient. Técnicas
 // Licença MIT
-// Copyright (c) 2024 [Seu Nome]
+// Copyright (c) 2024 
 // É concedida permissão, gratuitamente, a qualquer pessoa que obtenha uma cópia
 // deste software e dos arquivos de documentação associados (o "Software"), para lidar
 // no Software sem restrição, incluindo, sem limitação, os direitos de usar, copiar, modificar, mesclar, publicar, distribuir, sublicenciar e/ou vender
