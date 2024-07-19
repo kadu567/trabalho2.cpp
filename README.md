@@ -1,58 +1,208 @@
+# Projeto de Somador de 4 Bits com Arduino
 
-Software Demonstration
-Introduction to the Software
+## Índice
+
+1. [Organização de Diretórios e Arquivos](#organização-de-diretórios-e-arquivos)
+2. [Software Demonstration](#software-demonstration)
+3. [Overview of Developed Features](#overview-of-developed-features)
+4. [Overview of Future Activities](#overview-of-future-activities)
+5. [Overview of Resolved and Pending Bugs](#overview-of-resolved-and-pending-bugs)
+6. [Descrição do Código](#descrição-do-código)
+7. [Como Usar](#como-usar)
+8. [Licença](#licença)
+
+---
+
+## Demonstração de Software
+
+### Introdução ao Software
+“Este software foi desenvolvido para facilitar a adição de dois números de 4 bits usando um Arduino.”
+
+### Demonstração
+Demonstração ao vivo ou capturas de tela/vídeo mostrando o software em ação.
+
+### Detalhes técnicos
+Destaque os pinos de entrada e saída específicos usados ​​no Arduino.
+
+---
+
+## Visão geral dos recursos desenvolvidos
+
+### Descrição do Software
+Criamos um programa que utiliza um Arduino para somar dois números de 4 bits.
+
+### Detalhes de configuração
+- **Pinos de entrada:** Os pinos 0-7 e o pino 13 são usados ​​para ler os números e um sinal de controle.
+- **Pinos de saída:** Os pinos 8 a 12 são usados ​​para exibir o resultado e o bit de transporte.
+
+### Funcionalidades
+O software inclui funções para adição bit a bit e cálculo de carry bit.
+
+### Fluxo de trabalho
+No loop principal, o programa lê continuamente as entradas e o sinal de controle. Quando o sinal de controle é ativado, ele realiza a adição e atualiza os pinos de saída com os resultados.
+
+---
+
+## Visão geral das atividades futuras
+
+### Otimização
+Os planos futuros envolvem a otimização do código para melhorar o desempenho.
+
+### Operações Adicionais
+Apresentando operações adicionais, como subtração e multiplicação.
+
+### Teste
+Realização de testes extensivos para garantir precisão e confiabilidade.
+
+### Documentação
+Desenvolvimento de documentação abrangente com instruções detalhadas de uso e manutenção.
+
+### Teste automatizado
+Implementação de testes automatizados para agilizar o processo de validação.
+
+---
+
+## Visão geral de bugs resolvidos e pendentes
+
+### Problemas resolvidos
+- Corrigidos problemas relacionados a leituras imprecisas dos pinos de entrada.
+- Ajustou a lógica para cálculos de carry bit.
+
+### Questões Pendentes
+- Abordar comportamento inconsistente com certas entradas.
+- Melhorar a estabilidade das leituras dos pinos em ambientes ruidosos.
+
+### Plano de ação
+- Identificar as causas raiz dos bugs restantes.
+- Implementação de correções necessárias.
+- Reavaliar após cada ajuste para garantir que os problemas sejam resolvidos.
+
+---
+
+## Descrição do Código
+
+### Variáveis Globais
+
+```cpp
+int soma = 13; // Variável para armazenar o sinal de soma do pino 13
+int carryBit = 0; // Variável para armazenar o bit de carry para adição
+
+// Variáveis para armazenar os nibbles de entrada (valores de 4 bits)
+int nib1a, nib1b, nib1c, nib1d = 0;
+int nib2a, nib2b, nib2c, nib2d = 0;
+
+// Variáveis para armazenar os nibbles de resultado
+int res1a, res1b, res1c, res1d = 0;
+
+
+
+markdown
+Copiar código
+# Projeto de Somador de 4 Bits com Arduino
+
+## Índice
+
+1. [Organização de Diretórios e Arquivos](#organização-de-diretórios-e-arquivos)
+2. [Software Demonstration](#software-demonstration)
+3. [Overview of Developed Features](#overview-of-developed-features)
+4. [Overview of Future Activities](#overview-of-future-activities)
+5. [Overview of Resolved and Pending Bugs](#overview-of-resolved-and-pending-bugs)
+6. [Descrição do Código](#descrição-do-código)
+7. [Como Usar](#como-usar)
+8. [Licença](#licença)
+
+---
+
+## Organização de Diretórios e Arquivos
+
+### Estrutura Comum
+
+- **`docs/`**: Diretório principal para os arquivos de documentação.
+  - **`index.md`**: Arquivo principal de entrada.
+  - **`overview.md`**: Uma visão geral do projeto ou software.
+  - **`installation.md`**: Instruções de instalação.
+  - **`usage.md`**: Guia de uso do software.
+- **`api/`**: Diretório para documentação da API, se aplicável.
+  - **`index.md`**: Arquivo principal de documentação da API.
+- **`examples/`**: Exemplos de código ou uso.
+- **`images/`**: Imagens utilizadas na documentação.
+- **`LICENSE`**: Arquivo de licença do software.
+- **`CONTRIBUTING.md`**: Diretrizes para contribuições.
+- **`README.md`**: Informações básicas sobre o projeto.
+
+---
+
+## Software Demonstration
+
+### Introduction to the Software
 "This software was developed to facilitate the addition of two 4-bit numbers using an Arduino."
 
-Demonstration
+### Demonstration
 Live demonstration or screenshots/video showing the software in action.
 
-Technical Details
+### Technical Details
 Highlight the specific input and output pins used on the Arduino.
 
-Overview of Developed Features
-Software Description
+---
+
+## Overview of Developed Features
+
+### Software Description
 We have created a program that employs an Arduino to sum two 4-bit numbers.
 
-Configuration Details
-Input Pins: Pins 0-7 and pin 13 are used to read the numbers and a control signal.
-Output Pins: Pins 8-12 are used to display the result and the carry bit.
-Functionalities
+### Configuration Details
+- **Input Pins:** Pins 0-7 and pin 13 are used to read the numbers and a control signal.
+- **Output Pins:** Pins 8-12 are used to display the result and the carry bit.
+
+### Functionalities
 The software includes functions for bit-wise addition and carry bit computation.
 
-Workflow
-In the main loop, the program continuously reads the inputs and control signal.
-When the control signal is activated, it performs the addition and updates the output pins with the results.
-Overview of Future Activities
-Optimization
+### Workflow
+In the main loop, the program continuously reads the inputs and control signal. When the control signal is activated, it performs the addition and updates the output pins with the results.
+
+---
+
+## Overview of Future Activities
+
+### Optimization
 Future plans involve optimizing the code for enhanced performance.
 
-Additional Operations
+### Additional Operations
 Introducing additional operations such as subtraction and multiplication.
 
-Testing
+### Testing
 Conducting extensive tests to ensure accuracy and reliability.
 
-Documentation
+### Documentation
 Developing comprehensive documentation with detailed usage and maintenance instructions.
 
-Automated Testing
+### Automated Testing
 Implementing automated tests to streamline the validation process.
 
-Overview of Resolved and Pending Bugs
-Resolved Issues
-Corrected problems related to inaccurate input pin readings.
-Adjusted the logic for carry bit calculations.
-Pending Issues
-Addressing inconsistent behavior with certain inputs.
-Improving the stability of pin readings in noisy environments.
-Action Plan
-Identifying root causes of the remaining bugs.
-Implementing necessary fixes.
-Reevaluating after each adjustment to ensure issues are resolved.
-Descrição do Código
-Variáveis Globais
-cpp
-Copiar código
+---
+
+## Overview of Resolved and Pending Bugs
+
+### Resolved Issues
+- Corrected problems related to inaccurate input pin readings.
+- Adjusted the logic for carry bit calculations.
+
+### Pending Issues
+- Addressing inconsistent behavior with certain inputs.
+- Improving the stability of pin readings in noisy environments.
+
+### Action Plan
+- Identifying root causes of the remaining bugs.
+- Implementing necessary fixes.
+- Reevaluating after each adjustment to ensure issues are resolved.
+
+---
+
+## Descrição do Código
+
+### Variáveis Globais
+
+```cpp
 int soma = 13; // Variável para armazenar o sinal de soma do pino 13
 int carryBit = 0; // Variável para armazenar o bit de carry para adição
 
@@ -150,3 +300,5 @@ Carregar o código no Arduino e alimentar o microcontrolador.
 Quando o pino 13 estiver ativo, o Arduino realizará a soma dos nibbles de entrada e exibirá o resultado nos pinos de saída.
 Licença
 Este projeto está licenciado sob a MIT License.
+
+
